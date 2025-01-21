@@ -17,7 +17,78 @@
   height: 400px;
   border-radius: var(--jea-radius-secundary);
   border: 3px solid var(--jea-color-secundary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--jea-gap-xl);
 }
 
 #piedra-papel-tijeras .game-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  height: 40%;
+}
+
+#piedra-papel-tijeras .player {
+  position: relative;
+  margin: var(--jea-margin-s);
+}
+
+#piedra-papel-tijeras .player > h3 {
+  position: absolute;
+  bottom: 0;
+  right: -65px;
+  background-color: var(--jea-color-white);
+  padding: var(--jea-padding-s);
+  border-top-right-radius: var(--jea-radius-secundary);
+  border-bottom-right-radius: var(--jea-radius-secundary);
+  padding-left: 50px;
+  z-index: -1;
+}
+
+#piedra-papel-tijeras .player.robot > h3 {
+  position: absolute;
+  top: 0px;
+  bottom: 65px;
+  right: 45px;
+  background-color: var(--jea-color-white);
+  padding: var(--jea-padding-s);
+  border-top-left-radius: var(--jea-radius-secundary);
+  border-bottom-left-radius: var(--jea-radius-secundary);
+  padding-right: 55px;
+  z-index: -1;
+}
+
+#piedra-papel-tijeras .player div.img-wrapper {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+#piedra-papel-tijeras .player img {
+  background-color: white;
+  padding: 8px;
+}
+
+#piedra-papel-tijeras .options {
+  display: flex;
+  gap: var(--jea-gap-s);
+}
+
+#piedra-papel-tijeras .options > button {
+  font-size: 2rem;
+  padding: var(--jea-padding-s);
+  border-radius: 100%;
+}
+
+@media (max-width: 750px) {
+  #piedra-papel-tijeras > .game {
+    width: 330px;
+    height: 450px;
+  }
+  #piedra-papel-tijeras .game-menu {
+    flex-direction: column-reverse;
+  }
 }

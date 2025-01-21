@@ -8,7 +8,7 @@ const Header = () => {
       <ImgWrapper
         src="/logo/logo.png"
         alt="logo ReactiveGame"
-        height="40px"
+        width="70px"
         clase="logo-container"
       />
       <Link to="/">
