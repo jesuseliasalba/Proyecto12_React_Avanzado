@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+h1,
+h2 {
+  font-family: "Pixelify Sans", serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: var(--jea-font-xl);
+}
+h2 {
+  font-size: var(--jea-font-l);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: var(--jea-font-m);
+  text-align: center;
+  font-family: "Roboto", serif;
+  color: var(--jea-color-font);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: var(--jea-color-font);
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--jea-color-bg);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+:root {
+  /* COLORS */
+  --jea-color-bg: #e0e1ddff;
+  --jea-color-primary: #778da9ff;
+  --jea-color-secundary: #415a77ff;
+  --jea-color-tertiary: #1b263bff;
+  --jea-color-quaternary: #0d1b2aff;
+  --jea-color-white: white;
+  --jea-color-black: black;
+  --jea-color-font: var(--rt-color-black);
+
+  /* FONT SIZES */
+  --jea-font-xl: 2.5rem;
+  --jea-font-l: 1.5rem;
+  --jea-font-m: 16px;
+  --jea-font-s: 0.9rem;
+  --jea-font-xs: 0.7rem;
+
+  /* SPACINGS */
+
+  /* RADIUS */
+  --jea-radius-primary: 20px;
+  --jea-radius-secundary: 10px;
+  --jea-radius-buttons: 5px;
+
+  /* PADDING */
+  --jea-padding-xs: 5px;
+  --jea-padding-s: 10px;
+  --jea-padding-m: 20px;
+  --jea-padding-l: 30px;
+  --jea-padding-xl: 40px;
+
+  /* MARGIN */
+  --jea-margin-xs: 5px;
+  --jea-margin-s: 10px;
+  --jea-margin-m: 20px;
+  --jea-margin-l: 30px;
+  --jea-margin-xl: 40px;
+
+  /* GAP */
+  --jea-gap-s: 5px;
+  --jea-gap-m: 10px;
+  --jea-gap-l: 15px;
+  --jea-gap-xl: 25px;
+}
+
+/*! @media (max-width: 750px) { */
+
+@media (max-width: 1200px) {
+  body {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  :root {
+    --jea-font-xl: 2rem;
+    --jea-font-l: 1.5rem;
+    --jea-font-m: 14px;
+    --jea-font-s: 0.9rem;
+    --jea-font-xs: 0.7rem;
+  }
+}

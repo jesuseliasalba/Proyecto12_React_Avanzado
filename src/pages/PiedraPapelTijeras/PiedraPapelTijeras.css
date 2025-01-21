@@ -1,0 +1,11 @@
+#piedra-papel-tijeras {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#piedra-papel-tijeras > h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,9 @@
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--jea-gap-xl);
+  flex-wrap: wrap;
+  padding: var(--jea-padding-xl);
+  height: 100%;
+}

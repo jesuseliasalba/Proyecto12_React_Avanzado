@@ -1,0 +1,35 @@
+.headerMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--jea-padding-m);
+  gap: var(--jea-gap-xl);
+  background-color: var(--jea-color-secundary);
+  height: 10svh;
+}
+
+.headerMain > a {
+  transition: all 0.5s ease-in-out;
+}
+
+.headerMain > a:hover {
+  transform: scale(1.1);
+}
+
+.logo-container {
+  height: 40px;
+}
+
+.logo-container > img {
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 750px) {
+  .logo-container {
+    height: 30px;
+  }
+  .headerMain {
+    padding: var(--jea-padding-s);
+  }
+}
