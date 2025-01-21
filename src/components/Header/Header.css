@@ -16,15 +16,6 @@
   transform: scale(1.1);
 }
 
-.logo-container {
-  height: 40px;
-}
-
-.logo-container > img {
-  height: 100%;
-  width: auto;
-}
-
 @media (max-width: 750px) {
   .logo-container {
     height: 30px;

@@ -86,10 +86,10 @@ body {
   --jea-margin-xl: 40px;
 
   /* GAP */
-  --jea-gap-s: 5px;
-  --jea-gap-m: 10px;
-  --jea-gap-l: 15px;
-  --jea-gap-xl: 25px;
+  --jea-gap-s: 10px;
+  --jea-gap-m: 20px;
+  --jea-gap-l: 30px;
+  --jea-gap-xl: 50px;
 }
 
 /*! @media (max-width: 750px) { */
