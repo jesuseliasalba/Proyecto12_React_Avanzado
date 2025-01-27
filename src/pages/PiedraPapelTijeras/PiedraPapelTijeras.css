@@ -50,16 +50,13 @@
 }
 
 #piedra-papel-tijeras .player.robot > h3 {
-  position: absolute;
   top: 0px;
   bottom: 65px;
   right: 45px;
-  background-color: var(--jea-color-white);
-  padding: var(--jea-padding-s);
   border-top-left-radius: var(--jea-radius-secundary);
   border-bottom-left-radius: var(--jea-radius-secundary);
   padding-right: 55px;
-  z-index: -1;
+  padding-left: var(--jea-padding-s);
 }
 
 #piedra-papel-tijeras .player div.img-wrapper {
@@ -68,19 +65,8 @@
 }
 
 #piedra-papel-tijeras .player img {
-  background-color: white;
+  background-color: var(--jea-color-white);
   padding: 8px;
-}
-
-#piedra-papel-tijeras .options {
-  display: flex;
-  gap: var(--jea-gap-s);
-}
-
-#piedra-papel-tijeras .options > button {
-  font-size: 2rem;
-  padding: var(--jea-padding-s);
-  border-radius: 100%;
 }
 
 @media (max-width: 750px) {

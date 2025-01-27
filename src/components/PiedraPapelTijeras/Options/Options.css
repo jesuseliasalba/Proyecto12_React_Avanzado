@@ -1,0 +1,18 @@
+#piedra-papel-tijeras .options {
+  display: flex;
+  gap: var(--jea-gap-s);
+}
+
+#piedra-papel-tijeras .options > button {
+  padding: var(--jea-padding-sm);
+  border-radius: 100%;
+  background-color: var(--jea-color-secundary);
+  transition: all 0.5s;
+  box-shadow: 0 6px 0 var(--jea-color-tertiary);
+}
+
+#piedra-papel-tijeras .options > button.humanSelect {
+  transform: translateY(5px);
+  background-color: var(--jea-color-primary);
+  box-shadow: 0 2px 0 var(--jea-color-tertiary);
+}

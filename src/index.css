@@ -74,6 +74,7 @@ body {
   /* PADDING */
   --jea-padding-xs: 5px;
   --jea-padding-s: 10px;
+  --jea-padding-sm: 15px;
   --jea-padding-m: 20px;
   --jea-padding-l: 30px;
   --jea-padding-xl: 40px;
