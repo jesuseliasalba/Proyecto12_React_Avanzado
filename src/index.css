@@ -53,6 +53,7 @@ body {
   --jea-color-secundary: #415a77ff;
   --jea-color-tertiary: #1b263bff;
   --jea-color-quaternary: #0d1b2aff;
+  --jea-color-confirm: #2a9d8fff;
   --jea-color-white: white;
   --jea-color-black: black;
   --jea-color-font: var(--rt-color-black);

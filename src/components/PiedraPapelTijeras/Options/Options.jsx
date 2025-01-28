@@ -9,7 +9,9 @@ const Options = ({ options, select, setSelect }) => {
           <button
             key={option.name}
             onClick={() =>
-              setSelect({ type: "SET_USER_SELECT", payload: option.name })
+              select === option.name
+                ? setSelect({ type: "SET_USER_SELECT", payload: "" })
+                : setSelect({ type: "SET_USER_SELECT", payload: option.name })
             }
             className={select === option.name ? "humanSelect" : ""}
             aria-pressed={select === option.name}

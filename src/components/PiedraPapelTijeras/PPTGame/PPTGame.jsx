@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { options } from "../../../utils/options";
+import { options } from "../../../utils/PiedraPapelTijeras";
 import ImgWrapper from "../../ImgWrapper/ImgWrapper";
 import Options from "../Options/Options";
 import { PPTContext } from "../../../context/PPTContext";
@@ -22,6 +22,9 @@ const PPTGame = () => {
           />
           <h3>Máquina</h3>
         </div>
+      </div>
+      <div className="play">
+        <button>JUGAR</button>
       </div>
       <div className="game-menu">
         <div className="player">
