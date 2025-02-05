@@ -7,18 +7,21 @@ import Home from "./pages/Home/Home.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Bingo from "./pages/Bingo/Bingo.jsx";
 import PiedraPapelTijeras from "./pages/PiedraPapelTijeras/PiedraPapelTijeras.jsx";
+import AlertProvider from "./providers/AlertProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="bingo" element={<Bingo />} />
-          <Route path="piedrapapeltijeras" element={<PiedraPapelTijeras />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <AlertProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="bingo" element={<Bingo />} />
+            <Route path="piedrapapeltijeras" element={<PiedraPapelTijeras />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AlertProvider>
   </StrictMode>
 );

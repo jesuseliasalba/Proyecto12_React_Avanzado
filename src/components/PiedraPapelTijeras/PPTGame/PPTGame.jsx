@@ -5,12 +5,12 @@ import Options from "../Options/Options";
 import { PPTContext } from "../../../context/PPTContext";
 import "./PPTGame.css";
 import { playGame } from "../../../reducers/PPT.actions";
+import { useAlert } from "../../../hooks/useAlert";
 
 const PPTGame = () => {
   const { state, dispatch } = useContext(PPTContext);
   const [gameResultClass, setGameResultClass] = useState("");
-
-  console.log(state);
+  const { showAlert } = useAlert();
 
   useEffect(() => {
     if (!state.gamePlaying) {
@@ -40,8 +40,11 @@ const PPTGame = () => {
   }, [state.gamePlaying, state.lastWinner, dispatch]);
 
   const startGame = () => {
-    if (state.userSelect === "") return alert("Selecciona una opción");
-    playGame({ userSelect: state.userSelect, dispatch });
+    if (state.userSelect === "") {
+      showAlert({ message: "Selecciona una opción", type: "warning" });
+    } else {
+      playGame({ userSelect: state.userSelect, dispatch });
+    }
   };
 
   return (
