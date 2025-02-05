@@ -18,12 +18,24 @@ const PPTGame = () => {
       switch (state.lastWinner) {
         case "user":
           clase = "win";
+          showAlert({
+            message: "🥳 ¡ Has ganado !",
+            type: "success",
+          });
           break;
         case "machine":
           clase = "lose";
+          showAlert({
+            message: "😓 ¡ Has perdido !",
+            type: "error",
+          });
           break;
         case "Empate":
           clase = "draw";
+          showAlert({
+            message: "😵‍💫 ¡ Empate !",
+            type: "info",
+          });
           break;
         default:
           clase = "";
@@ -37,7 +49,7 @@ const PPTGame = () => {
 
       return () => clearTimeout(timer);
     }
-  }, [state.gamePlaying, state.lastWinner, dispatch]);
+  }, [state.gamePlaying, state.lastWinner]);
 
   const startGame = () => {
     if (state.userSelect === "") {
