@@ -1,6 +1,6 @@
 #piedra-papel-tijeras > .game {
   width: 550px;
-  height: 400px;
+  height: 430px;
   border-radius: var(--jea-radius-secundary);
   border: 3px solid var(--jea-color-secundary);
   display: flex;
@@ -8,6 +8,22 @@
   justify-content: center;
   flex-direction: column;
   gap: var(--jea-gap-xl);
+  transition: all 0.5s ease;
+}
+
+#piedra-papel-tijeras > .game.win {
+  --flash-color: rgba(144, 238, 144, 0.5);
+  animation: flashGame 1s ease-in-out;
+}
+
+#piedra-papel-tijeras > .game.lose {
+  --flash-color: rgba(255, 99, 71, 0.5);
+  animation: flashGame 1s ease-in-out;
+}
+
+#piedra-papel-tijeras > .game.draw {
+  --flash-color: rgba(116, 116, 116, 0.5);
+  animation: flashGame 1s ease-in-out;
 }
 
 #piedra-papel-tijeras .game-menu {
@@ -25,8 +41,8 @@
 
 #piedra-papel-tijeras .player > h3 {
   position: absolute;
-  bottom: 0;
-  right: -65px;
+  bottom: 10px;
+  right: -60px;
   background-color: var(--jea-color-white);
   padding: var(--jea-padding-s);
   border-top-right-radius: var(--jea-radius-secundary);
@@ -55,7 +71,9 @@
   padding: 8px;
 }
 
-#piedra-papel-tijeras .play {
+#piedra-papel-tijeras .player,
+#piedra-papel-tijeras .robot {
+  z-index: 2;
 }
 
 #piedra-papel-tijeras .play > button {
@@ -70,9 +88,15 @@
   transition: all 0.1s;
 }
 
-#piedra-papel-tijeras .play > button:active {
+#piedra-papel-tijeras .play > button:active,
+#piedra-papel-tijeras .play > button:disabled {
   transform: translateY(4px);
   box-shadow: 0 2px 0 var(--jea-color-tertiary);
+}
+
+#piedra-papel-tijeras .play > button:disabled {
+  filter: saturate(0.4);
+  cursor: wait;
 }
 
 @media (max-width: 750px) {
@@ -84,5 +108,16 @@
   }
   #piedra-papel-tijeras .game-menu {
     flex-direction: column-reverse;
+  }
+}
+
+@keyframes flashGame {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: var(--flash-color);
   }
 }

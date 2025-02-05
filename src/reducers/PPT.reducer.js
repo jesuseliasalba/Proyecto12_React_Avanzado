@@ -1,8 +1,7 @@
-import { getRandomSelect, getWinner } from "../utils/PiedraPapelTijeras";
-
 export const PPT_INITIAL = {
-  userSelect: null,
-  machineSelect: null,
+  gamePlaying: false,
+  userSelect: "",
+  machineSelect: "",
   lastWinner: null,
   wins: 0,
 };
@@ -11,21 +10,20 @@ export const PPTReducer = (state, action) => {
   switch (action.type) {
     case "SET_USER_SELECT":
       return { ...state, userSelect: action.payload };
-    case "PLAY_GAME": {
-      const machineSelect = getRandomSelect();
-      const winner = getWinner({
-        userSelect: state.userSelect,
-        machineSelect,
-      });
+    case "START_GAME":
+      return { ...state, gamePlaying: true };
+    case "PLAYED_GAME": {
+      const { winner, machineSelect } = action.payload;
       return {
         ...state,
+        gamePlaying: false,
         machineSelect,
         lastWinner: winner,
         wins: winner === "user" ? state.wins + 1 : state.wins,
       };
     }
-    case "ADD_WIN":
-      return { ...state, wins: state.wins + 1 };
+    case "RESET_GAME":
+      return { ...state, machineSelect: "", userSelect: "" };
     default:
       return state;
   }

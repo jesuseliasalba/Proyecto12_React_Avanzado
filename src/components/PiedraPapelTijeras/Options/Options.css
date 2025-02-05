@@ -11,8 +11,17 @@
   box-shadow: 0 6px 0 var(--jea-color-tertiary);
 }
 
-#piedra-papel-tijeras .options > button.humanSelect {
+#piedra-papel-tijeras .options > button.selection {
   transform: translateY(5px);
-  background-color: var(--jea-color-primary);
+  background-color: var(--jea-color-selection);
   box-shadow: 0 2px 0 var(--jea-color-tertiary);
+}
+
+#piedra-papel-tijeras .options > button.robotButton {
+  cursor: not-allowed;
+}
+
+#piedra-papel-tijeras .options button:disabled {
+  filter: saturate(0.4);
+  cursor: wait;
 }
