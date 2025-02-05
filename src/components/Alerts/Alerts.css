@@ -8,8 +8,9 @@
 }
 
 .alert {
-  color: white;
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: var(--jea-color-white);
+  padding: var(--jea-padding-s) var(--jea-padding-m);
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeInOut 3s forwards;
@@ -24,27 +25,28 @@
 }
 
 .alert.info {
-  background-color: #2196f3;
+  color: var(--jea-color-text);
+  background-color: #8bcafd;
 }
 
 .alert.warning {
-  background-color: #ff9800;
+  background-color: #c45f00;
 }
 
 @keyframes fadeInOut {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(40px);
   }
   10% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
   90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateX(10px);
   }
 }

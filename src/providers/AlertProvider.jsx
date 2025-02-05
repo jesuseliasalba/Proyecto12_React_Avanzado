@@ -3,14 +3,7 @@ import { AlertReducer } from "../reducers/Alert.reducer";
 import { AlertContext } from "../context/AlertContext";
 
 const AlertProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AlertReducer, [
-    {
-      id: 100,
-      message: "Selecciona una opción",
-      type: "warning",
-      duration: 3000,
-    },
-  ]);
+  const [state, dispatch] = useReducer(AlertReducer, []);
 
   return (
     <AlertContext.Provider value={{ state, dispatch }}>

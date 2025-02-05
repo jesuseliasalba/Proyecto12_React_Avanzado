@@ -41,7 +41,10 @@ const PPTGame = () => {
 
   const startGame = () => {
     if (state.userSelect === "") {
-      showAlert({ message: "Selecciona una opción", type: "warning" });
+      showAlert({
+        message: "⚠️ Debes seleccionar una opción",
+        type: "warning",
+      });
     } else {
       playGame({ userSelect: state.userSelect, dispatch });
     }
